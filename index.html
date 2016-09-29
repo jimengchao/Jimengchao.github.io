@@ -11,7 +11,7 @@
 <script>
     var tn;
     function timer(){
-        var ordertime = parseInt(Date.parse(new Date('2016-09-29 10:40:00'))) + 1800000;
+        var ordertime = parseInt(Date.parse(new Date('2016-09-29 10:40:00'))) + parseInt(1800000);
         alert(ordertime);
         if(ordertime - Date.parse(new Date()) <= 0){
             clearInterval(tn);
