@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var tn;
+    function timer(){
+        var ordertime = parseInt(Date.parse(new Date('2016-09-29 10:40:00'))) + 1800000;
+        alert(ordertime);
+        if(ordertime - Date.parse(new Date()) <= 0){
+            clearInterval(tn);
+            clearOrder();
+            return false;
+        }
+        var ts = Number(new Date(ordertime)) - Number(new Date());
+        var mm = parseInt(ts / 1000 / 60 % 60);
+        var ss = parseInt(ts / 1000 % 60);
+        document.getElementById('daojishi').innerHTML = checkTime(mm) + "分" + checkTime(ss) + "秒";
+    }
+    function checkTime(i){
+        if (i < 10) {
+            return "0" + i;
+        }
+        return i;
+    }
+    timer();
+</script>
+</body>
+</html>
