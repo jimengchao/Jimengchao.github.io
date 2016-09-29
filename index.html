@@ -10,9 +10,12 @@
 <body>
 <script>
     var tn;
+    var time = '2016-09-29 10:40:00';
     function timer(){
-        var ordertime = parseInt(Date.parse(new Date('2016-09-29 10:40:00'))) + 1800000;
-        alert(ordertime);
+        var times = time.split(' ');
+        var t0 = times[0].split('-');
+        var t1 = times[1].split(':');
+        var ordertime = parseInt(Date.parse(new Date(t0[0],t0[1],t0[2],t1[0],t1[1],t1[2]))) + 1800000;
         if(ordertime - Date.parse(new Date()) <= 0){
             clearInterval(tn);
             clearOrder();
@@ -21,7 +24,8 @@
         var ts = Number(new Date(ordertime)) - Number(new Date());
         var mm = parseInt(ts / 1000 / 60 % 60);
         var ss = parseInt(ts / 1000 % 60);
-        document.getElementById('daojishi').innerHTML = checkTime(mm) + "分" + checkTime(ss) + "秒";
+//        document.getElementById('daojishi').innerHTML = checkTime(mm) + "分" + checkTime(ss) + "秒";
+        alert(checkTime(mm) + "分" + checkTime(ss) + "秒");
     }
     function checkTime(i){
         if (i < 10) {
