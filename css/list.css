@@ -25,7 +25,7 @@ color: #2a2a2a;
 .hot,.his{background:#fff;border-bottom: 1px solid #e3e3e3;margin: 0.35rem 0;}
 .hot h3,.his h3{height: 1.333rem;line-height: 1.333rem;text-indent: 0.4rem;font-weight: normal;border-bottom:1px solid #ddd;}
 .hot .hot-label{padding:0.4rem;overflow: hidden;}
-.hot .hot-label a{line-height:0.864rem;height:0.864rem;padding:0 0.213rem 0 0.213rem;border:1px solid #e2e2e2;display: inline-block;color: #5a5a5a;border-radius: 0.04rem;margin:0 0.2rem 0.2rem 0;}
+.hot .hot-label a{padding:0.432rem 0.213rem;border:1px solid #e2e2e2;display: inline-block;color: #5a5a5a;border-radius: 0.04rem;margin:0 0.2rem 0.2rem 0;}
 .his .his-list a{display: block;border-bottom: 1px solid #ddd;color: #5a5a5a;line-height: 1.32rem;height:1.32rem;padding: 0 0 0 0.4rem}
 .his .clear{line-height: 1;color: #ff2600;text-align:center;padding: 0.5rem 0;}
 
